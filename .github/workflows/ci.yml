@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install uv
+        run: pip install uv
+      - name: Install deps
+        run: uv sync --group dev --all-extras
+      - name: Ruff lint
+        run: uv run ruff check . --output-format=github
+
+  test:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install uv
+        run: pip install uv
+      - name: Install deps
+        run: uv sync --group dev --all-extras
+      - name: Run tests
+        run: uv run pytest -q -vv
+
+  secrets-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITLEAKS_ENABLE_COMMENTS: false
+      - name: Fail if AWS keys patterns present
+        run: |
+          set -e
+          if git grep -nE 'AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}|aws_secret_access_key|aws_access_key_id' -- ':!**/.github/workflows/**' || true; then
+            echo "Potential AWS credentials detected."
+            exit 1
+          fi
+
+  build-and-deploy:
+    needs: [lint, test, secrets-scan]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure AWS credentials via OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+      - name: Build, tag, and push image to ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: addtwocicd
+          IMAGE_TAG: latest
+        run: |
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+      - name: Terraform apply (deploy)
+        working-directory: infra
+        run: |
+          terraform init -input=false -upgrade
+          terraform apply -auto-approve -input=false -var "github_org=${{ github.repository_owner }}" -var "github_repo=${{ github.event.repository.name }}"
+
+

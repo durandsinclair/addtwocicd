@@ -1,0 +1,28 @@
+[project]
+name = "addtwocicd"
+version = "0.1.0"
+description = "FastAPI service that adds two numbers, with CI/CD to AWS"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic>=2.7.0",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0.0",
+  "httpx>=0.27.0",
+  "ruff>=0.6.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+fix = true
+
+

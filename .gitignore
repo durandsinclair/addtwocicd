@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+
+# Logs (local only)
+logs/
+
+# Environment
+.env
+
+# Terraform
+.terraform/
+terraform.tfstate*
+
+# uv
+.python-version
+
+# OS
+.DS_Store
+
+
