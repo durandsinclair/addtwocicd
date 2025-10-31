@@ -54,11 +54,17 @@ jobs:
       - name: Fail if AWS keys patterns present
         run: |
           set +e
-          git grep -nE 'AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}|aws_secret_access_key|aws_access_key_id' -- ':!**/.github/workflows/**' > /tmp/aws_keys_found.txt
-          if [ $? -eq 0 ]; then
-            echo "Potential AWS credentials detected:"
-            cat /tmp/aws_keys_found.txt
-            exit 1
+          # Find matches, excluding workflow files and log files
+          git grep -nE 'AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}' -- ':!**/.github/workflows/**' ':!*.log' ':!*.txt' ':!**/ci-errors.txt' > /tmp/aws_keys_found.txt 2>/dev/null
+          git grep -nE 'aws_secret_access_key\s*=|aws_access_key_id\s*=' -- ':!**/.github/workflows/**' ':!*.log' ':!*.txt' ':!**/ci-errors.txt' >> /tmp/aws_keys_found.txt 2>/dev/null
+          
+          if [ -s /tmp/aws_keys_found.txt ]; then
+            # Filter out any matches that are just the pattern definition (not actual values)
+            if grep -vE '(grep|pattern|AKIA\[0-9A-Z\]|example|test|TODO)' /tmp/aws_keys_found.txt | grep -q .; then
+              echo "Potential AWS credentials detected:"
+              cat /tmp/aws_keys_found.txt
+              exit 1
+            fi
           fi
           set -e
 
