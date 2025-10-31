@@ -1,0 +1,604 @@
+secrets-scan	Set up job	﻿2025-10-31T04:06:37.7252495Z Current runner version: '2.328.0'
+secrets-scan	Set up job	2025-10-31T04:06:37.7278582Z ##[group]Runner Image Provisioner
+secrets-scan	Set up job	2025-10-31T04:06:37.7279848Z Hosted Compute Agent
+secrets-scan	Set up job	2025-10-31T04:06:37.7280455Z Version: 20250912.392
+secrets-scan	Set up job	2025-10-31T04:06:37.7281017Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+secrets-scan	Set up job	2025-10-31T04:06:37.7281744Z Build Date: 2025-09-12T15:23:14Z
+secrets-scan	Set up job	2025-10-31T04:06:37.7282317Z ##[endgroup]
+secrets-scan	Set up job	2025-10-31T04:06:37.7282869Z ##[group]Operating System
+secrets-scan	Set up job	2025-10-31T04:06:37.7283458Z Ubuntu
+secrets-scan	Set up job	2025-10-31T04:06:37.7283910Z 24.04.3
+secrets-scan	Set up job	2025-10-31T04:06:37.7284370Z LTS
+secrets-scan	Set up job	2025-10-31T04:06:37.7284769Z ##[endgroup]
+secrets-scan	Set up job	2025-10-31T04:06:37.7285321Z ##[group]Runner Image
+secrets-scan	Set up job	2025-10-31T04:06:37.7285860Z Image: ubuntu-24.04
+secrets-scan	Set up job	2025-10-31T04:06:37.7286342Z Version: 20250929.60.1
+secrets-scan	Set up job	2025-10-31T04:06:37.7287373Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+secrets-scan	Set up job	2025-10-31T04:06:37.7288703Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+secrets-scan	Set up job	2025-10-31T04:06:37.7290044Z ##[endgroup]
+secrets-scan	Set up job	2025-10-31T04:06:37.7291033Z ##[group]GITHUB_TOKEN Permissions
+secrets-scan	Set up job	2025-10-31T04:06:37.7292871Z Contents: read
+secrets-scan	Set up job	2025-10-31T04:06:37.7293382Z Metadata: read
+secrets-scan	Set up job	2025-10-31T04:06:37.7293872Z ##[endgroup]
+secrets-scan	Set up job	2025-10-31T04:06:37.7296046Z Secret source: Actions
+secrets-scan	Set up job	2025-10-31T04:06:37.7296780Z Prepare workflow directory
+secrets-scan	Set up job	2025-10-31T04:06:37.7850291Z Prepare all required actions
+secrets-scan	Set up job	2025-10-31T04:06:37.7907018Z Getting action download info
+secrets-scan	Set up job	2025-10-31T04:06:38.1618055Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+secrets-scan	Set up job	2025-10-31T04:06:38.3606997Z Download action repository 'gitleaks/gitleaks-action@v2' (SHA:ff98106e4c7b2bc287b24eaf42907196329070c7)
+secrets-scan	Set up job	2025-10-31T04:06:39.2924378Z Complete job name: secrets-scan
+secrets-scan	Run actions/checkout@v4	﻿2025-10-31T04:06:39.3736583Z ##[group]Run actions/checkout@v4
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3737548Z with:
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3738020Z   repository: durandsinclair/addtwocicd
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3739009Z   token: ***
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3739453Z   ssh-strict: true
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3739907Z   ssh-user: git
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3740350Z   persist-credentials: true
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3740835Z   clean: true
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3741287Z   sparse-checkout-cone-mode: true
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3741809Z   fetch-depth: 1
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3742223Z   fetch-tags: false
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3742657Z   show-progress: true
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3743092Z   lfs: false
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3743494Z   submodules: false
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3743957Z   set-safe-directory: true
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.3744699Z ##[endgroup]
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.4894468Z Syncing repository: durandsinclair/addtwocicd
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.4897566Z ##[group]Getting Git version info
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.4899184Z Working directory is '/home/runner/work/addtwocicd/addtwocicd'
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.4901297Z [command]/usr/bin/git version
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5000838Z git version 2.51.0
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5029187Z ##[endgroup]
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5046192Z Temporarily overriding HOME='/home/runner/work/_temp/994872bb-33c3-4f9b-818f-914c6423871b' before making global git config changes
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5049173Z Adding repository directory to the temporary git global config as a safe directory
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5061439Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/addtwocicd/addtwocicd
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5103836Z Deleting the contents of '/home/runner/work/addtwocicd/addtwocicd'
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5108098Z ##[group]Initializing the repository
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5113455Z [command]/usr/bin/git init /home/runner/work/addtwocicd/addtwocicd
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5251673Z hint: Using 'master' as the name for the initial branch. This default branch name
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5252991Z hint: is subject to change. To configure the initial branch name to use in all
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5254051Z hint: of your new repositories, which will suppress this warning, call:
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5254793Z hint:
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5255640Z hint: 	git config --global init.defaultBranch <name>
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5256267Z hint:
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5257189Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5258564Z hint: 'development'. The just-created branch can be renamed via this command:
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5259975Z hint:
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5260435Z hint: 	git branch -m <name>
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5261241Z hint:
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5262381Z hint: Disable this message with "git config set advice.defaultBranchName false"
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5264468Z Initialized empty Git repository in /home/runner/work/addtwocicd/addtwocicd/.git/
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5275181Z [command]/usr/bin/git remote add origin https://github.com/durandsinclair/addtwocicd
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5323076Z ##[endgroup]
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5324462Z ##[group]Disabling automatic garbage collection
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5328317Z [command]/usr/bin/git config --local gc.auto 0
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5362464Z ##[endgroup]
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5363878Z ##[group]Setting up auth
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5370795Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5407048Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5796726Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.5827270Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.6058076Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.6099535Z ##[endgroup]
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.6101067Z ##[group]Fetching the repository
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:39.6110113Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +022798b71fc73676a326be3fff83aa92cc4cbf54:refs/remotes/origin/main
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0426190Z From https://github.com/durandsinclair/addtwocicd
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0427377Z  * [new ref]         022798b71fc73676a326be3fff83aa92cc4cbf54 -> origin/main
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0462643Z ##[endgroup]
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0463477Z ##[group]Determining the checkout info
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0465573Z ##[endgroup]
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0471440Z [command]/usr/bin/git sparse-checkout disable
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0518750Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0549327Z ##[group]Checking out the ref
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0552828Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0616192Z Switched to a new branch 'main'
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0617649Z branch 'main' set up to track 'origin/main'.
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0624345Z ##[endgroup]
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0665045Z [command]/usr/bin/git log -1 --format=%H
+secrets-scan	Run actions/checkout@v4	2025-10-31T04:06:40.0689432Z 022798b71fc73676a326be3fff83aa92cc4cbf54
+secrets-scan	Run gitleaks	﻿2025-10-31T04:06:40.0914934Z ##[group]Run gitleaks/gitleaks-action@v2
+secrets-scan	Run gitleaks	2025-10-31T04:06:40.0915830Z env:
+secrets-scan	Run gitleaks	2025-10-31T04:06:40.0916309Z   GITLEAKS_ENABLE_COMMENTS: false
+secrets-scan	Run gitleaks	2025-10-31T04:06:40.0917016Z ##[endgroup]
+secrets-scan	Run gitleaks	2025-10-31T04:06:40.5706822Z [durandsinclair] is an individual user. No license key is required.
+secrets-scan	Run gitleaks	2025-10-31T04:06:40.5708624Z gitleaks version: 8.24.3
+secrets-scan	Run gitleaks	2025-10-31T04:06:40.5710319Z Version to install: 8.24.3 (target directory: /tmp/gitleaks-8.24.3)
+secrets-scan	Run gitleaks	2025-10-31T04:06:40.7812671Z Downloading gitleaks from https://github.com/zricethezav/gitleaks/releases/download/v8.24.3/gitleaks_8.24.3_linux_x64.tar.gz
+secrets-scan	Run gitleaks	2025-10-31T04:06:41.2340109Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /tmp/gitleaks-8.24.3 -f /tmp/gitleaks.tmp
+secrets-scan	Run gitleaks	2025-10-31T04:06:41.3509706Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/addtwocicd/addtwocicd --files-from manifest.txt --use-compress-program zstdmt
+secrets-scan	Run gitleaks	2025-10-31T04:06:42.7074363Z Sent 5717456 of 5717456 (100.0%), 5.4 MBs/sec
+secrets-scan	Run gitleaks	2025-10-31T04:06:42.9680489Z event type: push
+secrets-scan	Run gitleaks	2025-10-31T04:06:42.9681966Z gitleaks cmd: gitleaks detect --redact -v --exit-code=2 --report-format=sarif --report-path=results.sarif --log-level=debug --log-opts=-1
+secrets-scan	Run gitleaks	2025-10-31T04:06:42.9698654Z [command]/tmp/gitleaks-8.24.3/gitleaks detect --redact -v --exit-code=2 --report-format=sarif --report-path=results.sarif --log-level=debug --log-opts=-1
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.2351659Z 
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.2352499Z     ○
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.2353011Z     │╲
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.2353348Z     │ ○
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.2353652Z     ○ ░
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.2353993Z     ░    gitleaks
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.2354179Z 
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.2354659Z [90m4:06AM[0m DBG using github.com/wasilibs/go-re2 regex engine
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.2355640Z [90m4:06AM[0m DBG no gitleaks config found in path .gitleaks.toml, using default gitleaks config
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.3745414Z [90m4:06AM[0m DBG executing: /usr/bin/git -C . log -p -U0 -1
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.3784160Z [90m4:06AM[0m DBG SCM platform parsed from host [36mhost=[0mgithub.com [36mplatform=[0mgithub
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.4050861Z [90m4:06AM[0m [32mINF[0m [1m1 commits scanned.[0m
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.4051971Z [90m4:06AM[0m DBG Note: this number might be smaller than expected due to commits with no additions
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.4052927Z [90m4:06AM[0m [32mINF[0m [1mscanned ~111884 bytes (111.88 KB) in 170ms[0m
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.4053584Z [90m4:06AM[0m [32mINF[0m [1mno leaks found[0m
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.4086255Z Artifact name is valid!
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.4087128Z Root directory input is valid!
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.6122443Z Beginning upload of artifact content to blob storage
+secrets-scan	Run gitleaks	2025-10-31T04:06:43.9355774Z Uploaded bytes 6772
+secrets-scan	Run gitleaks	2025-10-31T04:06:44.0204689Z Finished uploading artifact content to blob storage!
+secrets-scan	Run gitleaks	2025-10-31T04:06:44.0208039Z SHA256 digest of uploaded artifact zip is f1fd5cdfaa0919ca201284dcd96710045604abe306ec917abfe0c3e0727c8e52
+secrets-scan	Run gitleaks	2025-10-31T04:06:44.0210217Z Finalizing artifact upload
+secrets-scan	Run gitleaks	2025-10-31T04:06:44.2658708Z Artifact gitleaks-results.sarif.zip successfully finalized. Artifact ID 4425801950
+secrets-scan	Run gitleaks	2025-10-31T04:06:44.2674680Z ✅ No leaks detected
+secrets-scan	Fail if AWS keys patterns present	﻿2025-10-31T04:06:44.2810699Z ##[group]Run set -e
+secrets-scan	Fail if AWS keys patterns present	2025-10-31T04:06:44.2811028Z [36;1mset -e[0m
+secrets-scan	Fail if AWS keys patterns present	2025-10-31T04:06:44.2811488Z [36;1mif git grep -nE 'AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}|aws_secret_access_key|aws_access_key_id' -- ':!**/.github/workflows/**' || true; then[0m
+secrets-scan	Fail if AWS keys patterns present	2025-10-31T04:06:44.2812027Z [36;1m  echo "Potential AWS credentials detected."[0m
+secrets-scan	Fail if AWS keys patterns present	2025-10-31T04:06:44.2812299Z [36;1m  exit 1[0m
+secrets-scan	Fail if AWS keys patterns present	2025-10-31T04:06:44.2812482Z [36;1mfi[0m
+secrets-scan	Fail if AWS keys patterns present	2025-10-31T04:06:44.2851801Z shell: /usr/bin/bash -e {0}
+secrets-scan	Fail if AWS keys patterns present	2025-10-31T04:06:44.2852064Z ##[endgroup]
+secrets-scan	Fail if AWS keys patterns present	2025-10-31T04:06:44.2946819Z .github/workflows/ci.yml:57:          if git grep -nE 'AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}|aws_secret_access_key|aws_access_key_id' -- ':!**/.github/workflows/**' || true; then
+secrets-scan	Fail if AWS keys patterns present	2025-10-31T04:06:44.2970571Z Potential AWS credentials detected.
+secrets-scan	Fail if AWS keys patterns present	2025-10-31T04:06:44.2984646Z ##[error]Process completed with exit code 1.
+secrets-scan	Post Run actions/checkout@v4	﻿2025-10-31T04:06:44.3082314Z Post job cleanup.
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4017564Z [command]/usr/bin/git version
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4054069Z git version 2.51.0
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4096753Z Temporarily overriding HOME='/home/runner/work/_temp/a6ece422-4d4a-4722-8fc3-8b7138a86cc9' before making global git config changes
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4097988Z Adding repository directory to the temporary git global config as a safe directory
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4102728Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/addtwocicd/addtwocicd
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4137935Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4170269Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4397586Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4419049Z http.https://github.com/.extraheader
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4432243Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+secrets-scan	Post Run actions/checkout@v4	2025-10-31T04:06:44.4462969Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+secrets-scan	Complete job	﻿2025-10-31T04:06:44.4791031Z Cleaning up orphan processes
+test	Set up job	﻿2025-10-31T04:06:37.3410567Z Current runner version: '2.328.0'
+test	Set up job	2025-10-31T04:06:37.3446137Z ##[group]Runner Image Provisioner
+test	Set up job	2025-10-31T04:06:37.3447350Z Hosted Compute Agent
+test	Set up job	2025-10-31T04:06:37.3448084Z Version: 20250912.392
+test	Set up job	2025-10-31T04:06:37.3448660Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+test	Set up job	2025-10-31T04:06:37.3449442Z Build Date: 2025-09-12T15:23:14Z
+test	Set up job	2025-10-31T04:06:37.3450013Z ##[endgroup]
+test	Set up job	2025-10-31T04:06:37.3450592Z ##[group]Operating System
+test	Set up job	2025-10-31T04:06:37.3451526Z Ubuntu
+test	Set up job	2025-10-31T04:06:37.3451996Z 24.04.3
+test	Set up job	2025-10-31T04:06:37.3452472Z LTS
+test	Set up job	2025-10-31T04:06:37.3452937Z ##[endgroup]
+test	Set up job	2025-10-31T04:06:37.3453463Z ##[group]Runner Image
+test	Set up job	2025-10-31T04:06:37.3454016Z Image: ubuntu-24.04
+test	Set up job	2025-10-31T04:06:37.3454564Z Version: 20250929.60.1
+test	Set up job	2025-10-31T04:06:37.3455570Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+test	Set up job	2025-10-31T04:06:37.3456975Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+test	Set up job	2025-10-31T04:06:37.3458199Z ##[endgroup]
+test	Set up job	2025-10-31T04:06:37.3459191Z ##[group]GITHUB_TOKEN Permissions
+test	Set up job	2025-10-31T04:06:37.3461326Z Contents: read
+test	Set up job	2025-10-31T04:06:37.3461876Z Metadata: read
+test	Set up job	2025-10-31T04:06:37.3462369Z ##[endgroup]
+test	Set up job	2025-10-31T04:06:37.3464488Z Secret source: Actions
+test	Set up job	2025-10-31T04:06:37.3465220Z Prepare workflow directory
+test	Set up job	2025-10-31T04:06:37.3957607Z Prepare all required actions
+test	Set up job	2025-10-31T04:06:37.4012817Z Getting action download info
+test	Set up job	2025-10-31T04:06:37.7126525Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+test	Set up job	2025-10-31T04:06:38.0871522Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+test	Set up job	2025-10-31T04:06:38.2475426Z Complete job name: test
+test	Run actions/checkout@v4	﻿2025-10-31T04:06:38.3199998Z ##[group]Run actions/checkout@v4
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3201456Z with:
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3201975Z   repository: durandsinclair/addtwocicd
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3203055Z   token: ***
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3203468Z   ssh-strict: true
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3203915Z   ssh-user: git
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3204351Z   persist-credentials: true
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3204831Z   clean: true
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3205271Z   sparse-checkout-cone-mode: true
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3205782Z   fetch-depth: 1
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3206198Z   fetch-tags: false
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3206634Z   show-progress: true
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3207065Z   lfs: false
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3207482Z   submodules: false
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3207908Z   set-safe-directory: true
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3208627Z env:
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3209037Z   PYTHONPATH: .
+test	Run actions/checkout@v4	2025-10-31T04:06:38.3209463Z ##[endgroup]
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4331844Z Syncing repository: durandsinclair/addtwocicd
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4333734Z ##[group]Getting Git version info
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4334764Z Working directory is '/home/runner/work/addtwocicd/addtwocicd'
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4336799Z [command]/usr/bin/git version
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4420230Z git version 2.51.0
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4448895Z ##[endgroup]
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4465634Z Temporarily overriding HOME='/home/runner/work/_temp/0c69e1d7-19e2-4e96-805d-cbc5190e07b3' before making global git config changes
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4468402Z Adding repository directory to the temporary git global config as a safe directory
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4481054Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/addtwocicd/addtwocicd
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4522590Z Deleting the contents of '/home/runner/work/addtwocicd/addtwocicd'
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4526853Z ##[group]Initializing the repository
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4532246Z [command]/usr/bin/git init /home/runner/work/addtwocicd/addtwocicd
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4665373Z hint: Using 'master' as the name for the initial branch. This default branch name
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4667079Z hint: is subject to change. To configure the initial branch name to use in all
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4668858Z hint: of your new repositories, which will suppress this warning, call:
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4670300Z hint:
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4671537Z hint: 	git config --global init.defaultBranch <name>
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4673176Z hint:
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4674289Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4676179Z hint: 'development'. The just-created branch can be renamed via this command:
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4677630Z hint:
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4678371Z hint: 	git branch -m <name>
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4679184Z hint:
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4680268Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4682492Z Initialized empty Git repository in /home/runner/work/addtwocicd/addtwocicd/.git/
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4686096Z [command]/usr/bin/git remote add origin https://github.com/durandsinclair/addtwocicd
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4728844Z ##[endgroup]
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4730218Z ##[group]Disabling automatic garbage collection
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4734310Z [command]/usr/bin/git config --local gc.auto 0
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4766148Z ##[endgroup]
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4767569Z ##[group]Setting up auth
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4774894Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Run actions/checkout@v4	2025-10-31T04:06:38.4808417Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Run actions/checkout@v4	2025-10-31T04:06:38.5202131Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Run actions/checkout@v4	2025-10-31T04:06:38.5233964Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Run actions/checkout@v4	2025-10-31T04:06:38.5456041Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test	Run actions/checkout@v4	2025-10-31T04:06:38.5499112Z ##[endgroup]
+test	Run actions/checkout@v4	2025-10-31T04:06:38.5500567Z ##[group]Fetching the repository
+test	Run actions/checkout@v4	2025-10-31T04:06:38.5510337Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +022798b71fc73676a326be3fff83aa92cc4cbf54:refs/remotes/origin/main
+test	Run actions/checkout@v4	2025-10-31T04:06:38.7997730Z From https://github.com/durandsinclair/addtwocicd
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8000883Z  * [new ref]         022798b71fc73676a326be3fff83aa92cc4cbf54 -> origin/main
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8029018Z ##[endgroup]
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8030082Z ##[group]Determining the checkout info
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8032157Z ##[endgroup]
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8037222Z [command]/usr/bin/git sparse-checkout disable
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8083012Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8113239Z ##[group]Checking out the ref
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8117385Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8175171Z Switched to a new branch 'main'
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8177988Z branch 'main' set up to track 'origin/main'.
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8185218Z ##[endgroup]
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8219942Z [command]/usr/bin/git log -1 --format=%H
+test	Run actions/checkout@v4	2025-10-31T04:06:38.8241542Z 022798b71fc73676a326be3fff83aa92cc4cbf54
+test	Set up Python	﻿2025-10-31T04:06:38.8534030Z ##[group]Run actions/setup-python@v5
+test	Set up Python	2025-10-31T04:06:38.8535215Z with:
+test	Set up Python	2025-10-31T04:06:38.8536029Z   python-version: 3.12
+test	Set up Python	2025-10-31T04:06:38.8536966Z   check-latest: false
+test	Set up Python	2025-10-31T04:06:38.8538153Z   token: ***
+test	Set up Python	2025-10-31T04:06:38.8539005Z   update-environment: true
+test	Set up Python	2025-10-31T04:06:38.8540041Z   allow-prereleases: false
+test	Set up Python	2025-10-31T04:06:38.8541260Z   freethreaded: false
+test	Set up Python	2025-10-31T04:06:38.8542152Z env:
+test	Set up Python	2025-10-31T04:06:38.8542913Z   PYTHONPATH: .
+test	Set up Python	2025-10-31T04:06:38.8543828Z ##[endgroup]
+test	Set up Python	2025-10-31T04:06:39.0228695Z ##[group]Installed versions
+test	Set up Python	2025-10-31T04:06:39.0343683Z Successfully set up CPython (3.12.11)
+test	Set up Python	2025-10-31T04:06:39.0346347Z ##[endgroup]
+test	Install uv	﻿2025-10-31T04:06:39.0488657Z ##[group]Run pip install uv
+test	Install uv	2025-10-31T04:06:39.0489738Z [36;1mpip install uv[0m
+test	Install uv	2025-10-31T04:06:39.0548583Z shell: /usr/bin/bash -e {0}
+test	Install uv	2025-10-31T04:06:39.0549558Z env:
+test	Install uv	2025-10-31T04:06:39.0550567Z   PYTHONPATH: .
+test	Install uv	2025-10-31T04:06:39.0551850Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Install uv	2025-10-31T04:06:39.0553590Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib/pkgconfig
+test	Install uv	2025-10-31T04:06:39.0555275Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Install uv	2025-10-31T04:06:39.0556773Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Install uv	2025-10-31T04:06:39.0558442Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Install uv	2025-10-31T04:06:39.0560173Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib
+test	Install uv	2025-10-31T04:06:39.0561825Z ##[endgroup]
+test	Install uv	2025-10-31T04:06:45.2292326Z Collecting uv
+test	Install uv	2025-10-31T04:06:45.3117915Z   Downloading uv-0.9.7-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+test	Install uv	2025-10-31T04:06:45.3371179Z Downloading uv-0.9.7-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (21.4 MB)
+test	Install uv	2025-10-31T04:06:45.5526621Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.4/21.4 MB 130.0 MB/s  0:00:00
+test	Install uv	2025-10-31T04:06:45.6059278Z Installing collected packages: uv
+test	Install uv	2025-10-31T04:06:45.8565081Z Successfully installed uv-0.9.7
+test	Install uv	2025-10-31T04:06:45.9733865Z 
+test	Install uv	2025-10-31T04:06:45.9734836Z [notice] A new release of pip is available: 25.2 -> 25.3
+test	Install uv	2025-10-31T04:06:45.9735568Z [notice] To update, run: pip install --upgrade pip
+test	Install deps	﻿2025-10-31T04:06:46.0376080Z ##[group]Run uv sync --group dev --all-extras
+test	Install deps	2025-10-31T04:06:46.0376490Z [36;1muv sync --group dev --all-extras[0m
+test	Install deps	2025-10-31T04:06:46.0409911Z shell: /usr/bin/bash -e {0}
+test	Install deps	2025-10-31T04:06:46.0410159Z env:
+test	Install deps	2025-10-31T04:06:46.0410326Z   PYTHONPATH: .
+test	Install deps	2025-10-31T04:06:46.0410592Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Install deps	2025-10-31T04:06:46.0411156Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib/pkgconfig
+test	Install deps	2025-10-31T04:06:46.0411617Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Install deps	2025-10-31T04:06:46.0411976Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Install deps	2025-10-31T04:06:46.0412334Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Install deps	2025-10-31T04:06:46.0412697Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib
+test	Install deps	2025-10-31T04:06:46.0412979Z ##[endgroup]
+test	Install deps	2025-10-31T04:06:46.0987155Z Using CPython 3.12.11 interpreter at: /opt/hostedtoolcache/Python/3.12.11/x64/bin/python3
+test	Install deps	2025-10-31T04:06:46.0987947Z Creating virtual environment at: .venv
+test	Install deps	2025-10-31T04:06:46.1023802Z Resolved 31 packages in 0.61ms
+test	Install deps	2025-10-31T04:06:46.1792823Z Downloading ruff (12.7MiB)
+test	Install deps	2025-10-31T04:06:46.1795189Z Downloading uvloop (4.2MiB)
+test	Install deps	2025-10-31T04:06:46.1797044Z Downloading pydantic-core (2.0MiB)
+test	Install deps	2025-10-31T04:06:46.1799242Z Downloading pygments (1.2MiB)
+test	Install deps	2025-10-31T04:06:46.3468942Z  Downloading pydantic-core
+test	Install deps	2025-10-31T04:06:46.4235604Z  Downloading uvloop
+test	Install deps	2025-10-31T04:06:46.4337691Z  Downloading ruff
+test	Install deps	2025-10-31T04:06:46.4654677Z  Downloading pygments
+test	Install deps	2025-10-31T04:06:46.4657012Z Prepared 29 packages in 362ms
+test	Install deps	2025-10-31T04:06:46.4839746Z Installed 29 packages in 18ms
+test	Install deps	2025-10-31T04:06:46.4840266Z  + annotated-doc==0.0.3
+test	Install deps	2025-10-31T04:06:46.4841071Z  + annotated-types==0.7.0
+test	Install deps	2025-10-31T04:06:46.4841433Z  + anyio==4.11.0
+test	Install deps	2025-10-31T04:06:46.4841808Z  + certifi==2025.10.5
+test	Install deps	2025-10-31T04:06:46.4842237Z  + click==8.3.0
+test	Install deps	2025-10-31T04:06:46.4842814Z  + fastapi==0.120.2
+test	Install deps	2025-10-31T04:06:46.4843180Z  + h11==0.16.0
+test	Install deps	2025-10-31T04:06:46.4843702Z  + httpcore==1.0.9
+test	Install deps	2025-10-31T04:06:46.4844070Z  + httptools==0.7.1
+test	Install deps	2025-10-31T04:06:46.4844377Z  + httpx==0.28.1
+test	Install deps	2025-10-31T04:06:46.4844654Z  + idna==3.11
+test	Install deps	2025-10-31T04:06:46.4844939Z  + iniconfig==2.3.0
+test	Install deps	2025-10-31T04:06:46.4845235Z  + packaging==25.0
+test	Install deps	2025-10-31T04:06:46.4845552Z  + pluggy==1.6.0
+test	Install deps	2025-10-31T04:06:46.4845884Z  + pydantic==2.12.3
+test	Install deps	2025-10-31T04:06:46.4846297Z  + pydantic-core==2.41.4
+test	Install deps	2025-10-31T04:06:46.4846789Z  + pygments==2.19.2
+test	Install deps	2025-10-31T04:06:46.4847151Z  + pytest==8.4.2
+test	Install deps	2025-10-31T04:06:46.4847497Z  + python-dotenv==1.2.1
+test	Install deps	2025-10-31T04:06:46.4847827Z  + pyyaml==6.0.3
+test	Install deps	2025-10-31T04:06:46.4848112Z  + ruff==0.14.2
+test	Install deps	2025-10-31T04:06:46.4848422Z  + sniffio==1.3.1
+test	Install deps	2025-10-31T04:06:46.4848827Z  + starlette==0.49.1
+test	Install deps	2025-10-31T04:06:46.4849450Z  + typing-extensions==4.15.0
+test	Install deps	2025-10-31T04:06:46.4849843Z  + typing-inspection==0.4.2
+test	Install deps	2025-10-31T04:06:46.4850197Z  + uvicorn==0.38.0
+test	Install deps	2025-10-31T04:06:46.4850493Z  + uvloop==0.22.1
+test	Install deps	2025-10-31T04:06:46.4850993Z  + watchfiles==1.1.1
+test	Install deps	2025-10-31T04:06:46.4851331Z  + websockets==15.0.1
+test	Run tests	﻿2025-10-31T04:06:46.4912339Z ##[group]Run uv run pytest -q -vv
+test	Run tests	2025-10-31T04:06:46.4912642Z [36;1muv run pytest -q -vv[0m
+test	Run tests	2025-10-31T04:06:46.4945303Z shell: /usr/bin/bash -e {0}
+test	Run tests	2025-10-31T04:06:46.4945530Z env:
+test	Run tests	2025-10-31T04:06:46.4945695Z   PYTHONPATH: .
+test	Run tests	2025-10-31T04:06:46.4945957Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Run tests	2025-10-31T04:06:46.4946372Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib/pkgconfig
+test	Run tests	2025-10-31T04:06:46.4946771Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Run tests	2025-10-31T04:06:46.4947118Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Run tests	2025-10-31T04:06:46.4947471Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+test	Run tests	2025-10-31T04:06:46.4947824Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib
+test	Run tests	2025-10-31T04:06:46.4948113Z ##[endgroup]
+test	Run tests	2025-10-31T04:06:48.7195672Z ============================= test session starts ==============================
+test	Run tests	2025-10-31T04:06:48.7196816Z platform linux -- Python 3.12.11, pytest-8.4.2, pluggy-1.6.0 -- /home/runner/work/addtwocicd/addtwocicd/.venv/bin/python
+test	Run tests	2025-10-31T04:06:48.7197889Z cachedir: .pytest_cache
+test	Run tests	2025-10-31T04:06:48.7198382Z rootdir: /home/runner/work/addtwocicd/addtwocicd
+test	Run tests	2025-10-31T04:06:48.7198962Z configfile: pyproject.toml
+test	Run tests	2025-10-31T04:06:48.7199409Z plugins: anyio-4.11.0
+test	Run tests	2025-10-31T04:06:49.6197213Z collecting ... collected 3 items
+test	Run tests	2025-10-31T04:06:49.6197471Z 
+test	Run tests	2025-10-31T04:06:49.6206545Z tests/test_app.py::test_add_numbers_pure PASSED                          [ 33%]
+test	Run tests	2025-10-31T04:06:49.6759903Z tests/test_app.py::test_health PASSED                                    [ 66%]
+test	Run tests	2025-10-31T04:06:49.7265778Z tests/test_app.py::test_add_endpoint PASSED                              [100%]
+test	Run tests	2025-10-31T04:06:49.7266317Z 
+test	Run tests	2025-10-31T04:06:49.7266503Z ============================== 3 passed in 0.96s ===============================
+test	Post Set up Python	﻿2025-10-31T04:06:49.7883634Z Post job cleanup.
+test	Post Run actions/checkout@v4	﻿2025-10-31T04:06:49.9499783Z Post job cleanup.
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0453334Z [command]/usr/bin/git version
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0489583Z git version 2.51.0
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0535267Z Temporarily overriding HOME='/home/runner/work/_temp/e16bc9df-d854-4637-a4db-061371dfe586' before making global git config changes
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0536578Z Adding repository directory to the temporary git global config as a safe directory
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0549262Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/addtwocicd/addtwocicd
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0585669Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0619953Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0853977Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0875581Z http.https://github.com/.extraheader
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0888588Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test	Post Run actions/checkout@v4	2025-10-31T04:06:50.0920060Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Complete job	﻿2025-10-31T04:06:50.1239770Z Cleaning up orphan processes
+lint	Set up job	﻿2025-10-31T04:06:38.3278121Z Current runner version: '2.328.0'
+lint	Set up job	2025-10-31T04:06:38.3302399Z ##[group]Runner Image Provisioner
+lint	Set up job	2025-10-31T04:06:38.3303240Z Hosted Compute Agent
+lint	Set up job	2025-10-31T04:06:38.3303892Z Version: 20250912.392
+lint	Set up job	2025-10-31T04:06:38.3304467Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+lint	Set up job	2025-10-31T04:06:38.3305160Z Build Date: 2025-09-12T15:23:14Z
+lint	Set up job	2025-10-31T04:06:38.3305761Z ##[endgroup]
+lint	Set up job	2025-10-31T04:06:38.3306355Z ##[group]Operating System
+lint	Set up job	2025-10-31T04:06:38.3306897Z Ubuntu
+lint	Set up job	2025-10-31T04:06:38.3307445Z 24.04.3
+lint	Set up job	2025-10-31T04:06:38.3307896Z LTS
+lint	Set up job	2025-10-31T04:06:38.3308359Z ##[endgroup]
+lint	Set up job	2025-10-31T04:06:38.3308891Z ##[group]Runner Image
+lint	Set up job	2025-10-31T04:06:38.3309458Z Image: ubuntu-24.04
+lint	Set up job	2025-10-31T04:06:38.3309975Z Version: 20250929.60.1
+lint	Set up job	2025-10-31T04:06:38.3310957Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250929.60/images/ubuntu/Ubuntu2404-Readme.md
+lint	Set up job	2025-10-31T04:06:38.3312589Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250929.60
+lint	Set up job	2025-10-31T04:06:38.3313779Z ##[endgroup]
+lint	Set up job	2025-10-31T04:06:38.3314805Z ##[group]GITHUB_TOKEN Permissions
+lint	Set up job	2025-10-31T04:06:38.3316533Z Contents: read
+lint	Set up job	2025-10-31T04:06:38.3317170Z Metadata: read
+lint	Set up job	2025-10-31T04:06:38.3317678Z ##[endgroup]
+lint	Set up job	2025-10-31T04:06:38.3319614Z Secret source: Actions
+lint	Set up job	2025-10-31T04:06:38.3320567Z Prepare workflow directory
+lint	Set up job	2025-10-31T04:06:38.3639054Z Prepare all required actions
+lint	Set up job	2025-10-31T04:06:38.3676843Z Getting action download info
+lint	Set up job	2025-10-31T04:06:38.7998977Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+lint	Set up job	2025-10-31T04:06:38.9795412Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+lint	Set up job	2025-10-31T04:06:39.1884770Z Complete job name: lint
+lint	Run actions/checkout@v4	﻿2025-10-31T04:06:39.2557225Z ##[group]Run actions/checkout@v4
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2558067Z with:
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2558492Z   repository: durandsinclair/addtwocicd
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2559169Z   token: ***
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2559551Z   ssh-strict: true
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2559977Z   ssh-user: git
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2560376Z   persist-credentials: true
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2560834Z   clean: true
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2561395Z   sparse-checkout-cone-mode: true
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2561890Z   fetch-depth: 1
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2562277Z   fetch-tags: false
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2562683Z   show-progress: true
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2563079Z   lfs: false
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2563468Z   submodules: false
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2563867Z   set-safe-directory: true
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.2564535Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3619772Z Syncing repository: durandsinclair/addtwocicd
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3621774Z ##[group]Getting Git version info
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3622504Z Working directory is '/home/runner/work/addtwocicd/addtwocicd'
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3623526Z [command]/usr/bin/git version
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3701677Z git version 2.51.0
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3727870Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3749086Z Temporarily overriding HOME='/home/runner/work/_temp/e7ff9a02-93b6-4bc8-bec0-81c7bba01aeb' before making global git config changes
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3750522Z Adding repository directory to the temporary git global config as a safe directory
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3754728Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/addtwocicd/addtwocicd
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3791548Z Deleting the contents of '/home/runner/work/addtwocicd/addtwocicd'
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3794791Z ##[group]Initializing the repository
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3799028Z [command]/usr/bin/git init /home/runner/work/addtwocicd/addtwocicd
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3911380Z hint: Using 'master' as the name for the initial branch. This default branch name
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3912620Z hint: is subject to change. To configure the initial branch name to use in all
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3914167Z hint: of your new repositories, which will suppress this warning, call:
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3915313Z hint:
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3916215Z hint: 	git config --global init.defaultBranch <name>
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3917151Z hint:
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3918038Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3918954Z hint: 'development'. The just-created branch can be renamed via this command:
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3919657Z hint:
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3920037Z hint: 	git branch -m <name>
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3920487Z hint:
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3921304Z hint: Disable this message with "git config set advice.defaultBranchName false"
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3922717Z Initialized empty Git repository in /home/runner/work/addtwocicd/addtwocicd/.git/
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3927133Z [command]/usr/bin/git remote add origin https://github.com/durandsinclair/addtwocicd
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3963330Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3964076Z ##[group]Disabling automatic garbage collection
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3967179Z [command]/usr/bin/git config --local gc.auto 0
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3997776Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.3998464Z ##[group]Setting up auth
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.4008743Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.4043176Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.4457795Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.4493958Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.4748421Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.4794227Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.4795166Z ##[group]Fetching the repository
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.4803970Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +022798b71fc73676a326be3fff83aa92cc4cbf54:refs/remotes/origin/main
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8773426Z From https://github.com/durandsinclair/addtwocicd
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8774788Z  * [new ref]         022798b71fc73676a326be3fff83aa92cc4cbf54 -> origin/main
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8803760Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8804821Z ##[group]Determining the checkout info
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8806005Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8810770Z [command]/usr/bin/git sparse-checkout disable
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8849457Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8876710Z ##[group]Checking out the ref
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8879994Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8935381Z Switched to a new branch 'main'
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8938084Z branch 'main' set up to track 'origin/main'.
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8944271Z ##[endgroup]
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.8978201Z [command]/usr/bin/git log -1 --format=%H
+lint	Run actions/checkout@v4	2025-10-31T04:06:39.9000145Z 022798b71fc73676a326be3fff83aa92cc4cbf54
+lint	Set up Python	﻿2025-10-31T04:06:39.9230243Z ##[group]Run actions/setup-python@v5
+lint	Set up Python	2025-10-31T04:06:39.9230799Z with:
+lint	Set up Python	2025-10-31T04:06:39.9231452Z   python-version: 3.12
+lint	Set up Python	2025-10-31T04:06:39.9231885Z   check-latest: false
+lint	Set up Python	2025-10-31T04:06:39.9232427Z   token: ***
+lint	Set up Python	2025-10-31T04:06:39.9232813Z   update-environment: true
+lint	Set up Python	2025-10-31T04:06:39.9233273Z   allow-prereleases: false
+lint	Set up Python	2025-10-31T04:06:39.9233703Z   freethreaded: false
+lint	Set up Python	2025-10-31T04:06:39.9234102Z ##[endgroup]
+lint	Set up Python	2025-10-31T04:06:40.0883447Z ##[group]Installed versions
+lint	Set up Python	2025-10-31T04:06:40.1009713Z Successfully set up CPython (3.12.11)
+lint	Set up Python	2025-10-31T04:06:40.1011314Z ##[endgroup]
+lint	Install uv	﻿2025-10-31T04:06:40.1127113Z ##[group]Run pip install uv
+lint	Install uv	2025-10-31T04:06:40.1127695Z [36;1mpip install uv[0m
+lint	Install uv	2025-10-31T04:06:40.1313207Z shell: /usr/bin/bash -e {0}
+lint	Install uv	2025-10-31T04:06:40.1313729Z env:
+lint	Install uv	2025-10-31T04:06:40.1314220Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Install uv	2025-10-31T04:06:40.1315044Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib/pkgconfig
+lint	Install uv	2025-10-31T04:06:40.1316081Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Install uv	2025-10-31T04:06:40.1316830Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Install uv	2025-10-31T04:06:40.1317632Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Install uv	2025-10-31T04:06:40.1318367Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib
+lint	Install uv	2025-10-31T04:06:40.1319172Z ##[endgroup]
+lint	Install uv	2025-10-31T04:06:45.4182483Z Collecting uv
+lint	Install uv	2025-10-31T04:06:45.4520155Z   Downloading uv-0.9.7-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+lint	Install uv	2025-10-31T04:06:45.4607680Z Downloading uv-0.9.7-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (21.4 MB)
+lint	Install uv	2025-10-31T04:06:45.6443359Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.4/21.4 MB 127.5 MB/s  0:00:00
+lint	Install uv	2025-10-31T04:06:45.6848411Z Installing collected packages: uv
+lint	Install uv	2025-10-31T04:06:45.9315739Z Successfully installed uv-0.9.7
+lint	Install uv	2025-10-31T04:06:46.0111622Z 
+lint	Install uv	2025-10-31T04:06:46.0112167Z [notice] A new release of pip is available: 25.2 -> 25.3
+lint	Install uv	2025-10-31T04:06:46.0113220Z [notice] To update, run: pip install --upgrade pip
+lint	Install deps	﻿2025-10-31T04:06:46.0753663Z ##[group]Run uv sync --group dev --all-extras
+lint	Install deps	2025-10-31T04:06:46.0754129Z [36;1muv sync --group dev --all-extras[0m
+lint	Install deps	2025-10-31T04:06:46.0788654Z shell: /usr/bin/bash -e {0}
+lint	Install deps	2025-10-31T04:06:46.0788937Z env:
+lint	Install deps	2025-10-31T04:06:46.0789233Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Install deps	2025-10-31T04:06:46.0789698Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib/pkgconfig
+lint	Install deps	2025-10-31T04:06:46.0790177Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Install deps	2025-10-31T04:06:46.0790595Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Install deps	2025-10-31T04:06:46.0790988Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Install deps	2025-10-31T04:06:46.0791577Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib
+lint	Install deps	2025-10-31T04:06:46.0791919Z ##[endgroup]
+lint	Install deps	2025-10-31T04:06:46.1355892Z Using CPython 3.12.11 interpreter at: /opt/hostedtoolcache/Python/3.12.11/x64/bin/python3
+lint	Install deps	2025-10-31T04:06:46.1356956Z Creating virtual environment at: .venv
+lint	Install deps	2025-10-31T04:06:46.1390005Z Resolved 31 packages in 0.56ms
+lint	Install deps	2025-10-31T04:06:46.1669817Z Downloading ruff (12.7MiB)
+lint	Install deps	2025-10-31T04:06:46.1671038Z Downloading uvloop (4.2MiB)
+lint	Install deps	2025-10-31T04:06:46.1678311Z Downloading pydantic-core (2.0MiB)
+lint	Install deps	2025-10-31T04:06:46.1686408Z Downloading pygments (1.2MiB)
+lint	Install deps	2025-10-31T04:06:46.2764416Z  Downloading pydantic-core
+lint	Install deps	2025-10-31T04:06:46.4156152Z  Downloading ruff
+lint	Install deps	2025-10-31T04:06:46.4269942Z  Downloading uvloop
+lint	Install deps	2025-10-31T04:06:46.4622211Z  Downloading pygments
+lint	Install deps	2025-10-31T04:06:46.4624365Z Prepared 29 packages in 322ms
+lint	Install deps	2025-10-31T04:06:46.4790173Z Installed 29 packages in 16ms
+lint	Install deps	2025-10-31T04:06:46.4790747Z  + annotated-doc==0.0.3
+lint	Install deps	2025-10-31T04:06:46.4791378Z  + annotated-types==0.7.0
+lint	Install deps	2025-10-31T04:06:46.4791847Z  + anyio==4.11.0
+lint	Install deps	2025-10-31T04:06:46.4792252Z  + certifi==2025.10.5
+lint	Install deps	2025-10-31T04:06:46.4792662Z  + click==8.3.0
+lint	Install deps	2025-10-31T04:06:46.4793043Z  + fastapi==0.120.2
+lint	Install deps	2025-10-31T04:06:46.4793715Z  + h11==0.16.0
+lint	Install deps	2025-10-31T04:06:46.4794153Z  + httpcore==1.0.9
+lint	Install deps	2025-10-31T04:06:46.4794589Z  + httptools==0.7.1
+lint	Install deps	2025-10-31T04:06:46.4794986Z  + httpx==0.28.1
+lint	Install deps	2025-10-31T04:06:46.4795347Z  + idna==3.11
+lint	Install deps	2025-10-31T04:06:46.4795819Z  + iniconfig==2.3.0
+lint	Install deps	2025-10-31T04:06:46.4796204Z  + packaging==25.0
+lint	Install deps	2025-10-31T04:06:46.4796578Z  + pluggy==1.6.0
+lint	Install deps	2025-10-31T04:06:46.4796973Z  + pydantic==2.12.3
+lint	Install deps	2025-10-31T04:06:46.4797377Z  + pydantic-core==2.41.4
+lint	Install deps	2025-10-31T04:06:46.4797791Z  + pygments==2.19.2
+lint	Install deps	2025-10-31T04:06:46.4798171Z  + pytest==8.4.2
+lint	Install deps	2025-10-31T04:06:46.4798589Z  + python-dotenv==1.2.1
+lint	Install deps	2025-10-31T04:06:46.4799018Z  + pyyaml==6.0.3
+lint	Install deps	2025-10-31T04:06:46.4799393Z  + ruff==0.14.2
+lint	Install deps	2025-10-31T04:06:46.4799756Z  + sniffio==1.3.1
+lint	Install deps	2025-10-31T04:06:46.4800154Z  + starlette==0.49.1
+lint	Install deps	2025-10-31T04:06:46.4800551Z  + typing-extensions==4.15.0
+lint	Install deps	2025-10-31T04:06:46.4801011Z  + typing-inspection==0.4.2
+lint	Install deps	2025-10-31T04:06:46.4801733Z  + uvicorn==0.38.0
+lint	Install deps	2025-10-31T04:06:46.4802087Z  + uvloop==0.22.1
+lint	Install deps	2025-10-31T04:06:46.4802919Z  + watchfiles==1.1.1
+lint	Install deps	2025-10-31T04:06:46.4803328Z  + websockets==15.0.1
+lint	Ruff lint	﻿2025-10-31T04:06:46.4867003Z ##[group]Run uv run ruff check . --output-format=github
+lint	Ruff lint	2025-10-31T04:06:46.4867483Z [36;1muv run ruff check . --output-format=github[0m
+lint	Ruff lint	2025-10-31T04:06:46.4902685Z shell: /usr/bin/bash -e {0}
+lint	Ruff lint	2025-10-31T04:06:46.4902978Z env:
+lint	Ruff lint	2025-10-31T04:06:46.4903258Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Ruff lint	2025-10-31T04:06:46.4903722Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib/pkgconfig
+lint	Ruff lint	2025-10-31T04:06:46.4904184Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Ruff lint	2025-10-31T04:06:46.4904599Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Ruff lint	2025-10-31T04:06:46.4905004Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.11/x64
+lint	Ruff lint	2025-10-31T04:06:46.4905409Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.11/x64/lib
+lint	Ruff lint	2025-10-31T04:06:46.4905750Z ##[endgroup]
+lint	Ruff lint	2025-10-31T04:06:46.5792422Z ruff failed
+lint	Ruff lint	2025-10-31T04:06:46.5793229Z   Cause: Failed to parse /home/runner/work/addtwocicd/addtwocicd/pyproject.toml
+lint	Ruff lint	2025-10-31T04:06:46.5794095Z   Cause: TOML parse error at line 26, column 1
+lint	Ruff lint	2025-10-31T04:06:46.5794652Z    |
+lint	Ruff lint	2025-10-31T04:06:46.5794981Z 26 | fix = true
+lint	Ruff lint	2025-10-31T04:06:46.5795333Z    | ^^^
+lint	Ruff lint	2025-10-31T04:06:46.5799057Z unknown field `fix`, expected one of `allowed-confusables`, `dummy-variable-rgx`, `extend-ignore`, `extend-select`, `extend-fixable`, `extend-unfixable`, `external`, `fixable`, `ignore`, `extend-safe-fixes`, `extend-unsafe-fixes`, `ignore-init-module-imports`, `logger-objects`, `select`, `explicit-preview-rules`, `task-tags`, `typing-modules`, `unfixable`, `flake8-annotations`, `flake8-bandit`, `flake8-boolean-trap`, `flake8-bugbear`, `flake8-builtins`, `flake8-comprehensions`, `flake8-copyright`, `flake8-errmsg`, `flake8-quotes`, `flake8-self`, `flake8-tidy-imports`, `flake8-type-checking`, `flake8-gettext`, `flake8-implicit-str-concat`, `flake8-import-conventions`, `flake8-pytest-style`, `flake8-unused-arguments`, `isort`, `mccabe`, `pep8-naming`, `pycodestyle`, `pydocstyle`, `pyflakes`, `pylint`, `pyupgrade`, `per-file-ignores`, `extend-per-file-ignores`, `exclude`, `pydoclint`, `ruff`, `preview`, `typing-extensions`, `future-annotations`
+lint	Ruff lint	2025-10-31T04:06:46.5803426Z 
+lint	Ruff lint	2025-10-31T04:06:46.5831872Z ##[error]Process completed with exit code 2.
+lint	Post Run actions/checkout@v4	﻿2025-10-31T04:06:46.5933678Z Post job cleanup.
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.6873088Z [command]/usr/bin/git version
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.6914229Z git version 2.51.0
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.6974843Z Temporarily overriding HOME='/home/runner/work/_temp/b44f986c-e4cb-43c2-bb9d-cc8bd0aed4e6' before making global git config changes
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.6976509Z Adding repository directory to the temporary git global config as a safe directory
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.6992647Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/addtwocicd/addtwocicd
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.7034909Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.7074722Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.7330154Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.7353107Z http.https://github.com/.extraheader
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.7370160Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+lint	Post Run actions/checkout@v4	2025-10-31T04:06:46.7404898Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+lint	Complete job	﻿2025-10-31T04:06:46.7756168Z Cleaning up orphan processes

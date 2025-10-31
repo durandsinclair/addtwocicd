@@ -1,5 +1,6 @@
 from fastapi.testclient import TestClient
-from src.app.main import app, add_numbers
+
+from src.app.main import add_numbers, app
 
 
 def test_add_numbers_pure():

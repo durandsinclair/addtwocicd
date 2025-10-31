@@ -53,11 +53,14 @@ jobs:
           GITLEAKS_ENABLE_COMMENTS: false
       - name: Fail if AWS keys patterns present
         run: |
-          set -e
-          if git grep -nE 'AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}|aws_secret_access_key|aws_access_key_id' -- ':!**/.github/workflows/**' || true; then
-            echo "Potential AWS credentials detected."
+          set +e
+          git grep -nE 'AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}|aws_secret_access_key|aws_access_key_id' -- ':!**/.github/workflows/**' > /tmp/aws_keys_found.txt
+          if [ $? -eq 0 ]; then
+            echo "Potential AWS credentials detected:"
+            cat /tmp/aws_keys_found.txt
             exit 1
           fi
+          set -e
 
   build-and-deploy:
     needs: [lint, test, secrets-scan]

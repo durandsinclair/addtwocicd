@@ -1,7 +1,8 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 import logging
 import os
+
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
 
 
 class AddRequest(BaseModel):
@@ -58,7 +59,8 @@ def health() -> dict:
 def add(body: AddRequest) -> dict:
     try:
         result = add_numbers(body.a, body.b)
-        logging.getLogger(__name__).info("add called with a=%s b=%s result=%s", body.a, body.b, result)
+        logger = logging.getLogger(__name__)
+        logger.info("add called with a=%s b=%s result=%s", body.a, body.b, result)
         return {"result": result}
     except Exception as exc:  # pragma: no cover
         raise HTTPException(status_code=400, detail=str(exc)) from exc
