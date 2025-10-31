@@ -9,6 +9,9 @@ install:
 test:
 	PYTHONPATH=. uv run pytest -q -vv
 
+test_github:
+	pass
+
 lint:
 	uv run ruff check . --fix
 

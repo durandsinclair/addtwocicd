@@ -51,6 +51,7 @@ jobs:
         uses: gitleaks/gitleaks-action@v2
         env:
           GITLEAKS_ENABLE_COMMENTS: false
+          GITLEAKS_NO_GIT: "true"  # Add this line
       - name: Fail if AWS keys patterns present
         run: |
           set +e
