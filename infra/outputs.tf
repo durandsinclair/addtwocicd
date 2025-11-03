@@ -10,4 +10,7 @@ output "github_oidc_role_arn" {
   value = aws_iam_role.gha_role.arn
 }
 
+output "aws_region" {
+  value = var.aws_region
+}
 

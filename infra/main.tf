@@ -113,9 +113,9 @@ resource "aws_apprunner_service" "service" {
     unhealthy_threshold = 3
   }
 
-  observability_configuration {
-    observability_enabled = true
-  }
+  # Note: Observability is omitted. App Runner automatically sends logs to CloudWatch
+  # without requiring an observability configuration. Logs will appear in:
+  # /aws/apprunner/${service_name}
 }
 
 data "aws_iam_policy_document" "apprunner_access_assume" {

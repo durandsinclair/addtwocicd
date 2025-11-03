@@ -5,6 +5,7 @@ on:
     branches: ["**"]
   pull_request:
     branches: ["**"]
+  workflow_dispatch:  # Manual trigger for deployment
 
 permissions:
   id-token: write
@@ -51,7 +52,7 @@ jobs:
         uses: gitleaks/gitleaks-action@v2
         env:
           GITLEAKS_ENABLE_COMMENTS: false
-          GITLEAKS_NO_GIT: "true"  # Add this line
+          GITLEAKS_NO_GIT: "true"  
       - name: Fail if AWS keys patterns present
         run: |
           set +e
@@ -71,7 +72,8 @@ jobs:
 
   build-and-deploy:
     needs: [lint, test, secrets-scan]
-    if: github.ref == 'refs/heads/main'
+    # Only run on manual trigger (workflow_dispatch), not on automatic pushes
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
